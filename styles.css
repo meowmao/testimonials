@@ -36,10 +36,22 @@ p{
 
 main .quotes{
     padding: 27px 32px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 24px;
     box-shadow: 10px 10px 20px var(--ltgray);
 }
+
+@media only screen and (min-width: 992px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "daniel daniel  jonathan kira"
+        "jeanette patrick patrick kira";
+    }
+  
+  }
 
 .daniel{
     background-color: var(--modviolet);
@@ -47,22 +59,32 @@ main .quotes{
     background-repeat: no-repeat;
     background-position-x: 90%;
 
+    grid-area: daniel;
+
 }
 
 .jonathan{
     background-color: var(--dkgrayblue);
+
+    grid-area: jonathan;
 }
 
 .jeanette{
     background-color: var(--white);
+
+    grid-area: jeanette;
 }
 
 .patrick{
     background-color: var(--dkblackblue);
+
+    grid-area: patrick;
 }
 
 .kira{
     background-color: var(--white);
+
+    grid-area: kira;
 }
 
 .gray{
@@ -88,6 +110,17 @@ main .quotes{
 }
 
 .quotes h2{
+    font-size: 1.2em;
     margin-bottom: 27px;
 }
 
+@media only screen and (min-width: 992px) {
+    .quotes {
+        margin: 0 1em;
+    }
+}
+
+.attribution{
+    padding: 10px;
+    background-color: pink;
+}
